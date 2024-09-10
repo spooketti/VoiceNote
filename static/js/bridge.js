@@ -2,16 +2,8 @@ const recieveAudioEndpoint = "http://127.0.0.1:8086/recieveAudio/"
 
 function sendFileToServer()
 {
-    let fileElement = document.getElementById("audioFile");
-    let file = fileElement.files[0]
-    if(!file)
-    {
-        return
-    }
-
-    let theform = document.getElementById("theform")
     const formData = new FormData();
-    formData.append("why",file)
+    formData.append("why",bridgeBlob)
     formData.append("test","test")
     console.log(formData)
 

@@ -4,6 +4,7 @@ let isRecording = false
 let recordButton = document.getElementById("recordButton")
 let audioPreview = document.getElementById("audioPreview")
 let audioFile = document.getElementById("audioFile")
+let bridgeBlob
 
 function AudioSetup()
 {
@@ -36,6 +37,7 @@ function StreamSetup(stream)
         chunks = []
         audioPreview.src = window.URL.createObjectURL(blob)
         audioFile.src = window.URL.createObjectURL(blob)
+        bridgeBlob = blob
     }
 }
 AudioSetup()
