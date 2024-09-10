@@ -5,14 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VoiceNotes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   </head>
   <body>
+    <nav id="Header"></nav>
     <form id="theform">
     <input type="file" accept=".wav" id="audioFile" name="file">
 </form>
+<div id="RecordWrapper">
+  <h1>Record Audio or Upload A .wav File!</h1>
+  <span>This website is designed to take notes for you!</span>
+  <button class="RecordButton"><span class="material-symbols-outlined">
+mic
+</span></button>
+</div>
     <button onclick="sendFileToServer()"></button>
 
-    <script src="static/js/script.js"></script>
+
+
+    <script src="static/js/record.js"></script>
+    <script src="static/js/bridge.js"></script>
   </body>
 </html>
