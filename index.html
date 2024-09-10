@@ -19,11 +19,14 @@
 <div id="RecordWrapper">
   <h1>Record Audio or Upload A .wav File!</h1>
   <span>This website is designed to take notes for you!</span>
-  <button class="RecordButton"><span class="material-symbols-outlined">
+  <button id="recordButton" class="RecordButton" onclick="micToggle()"><span class="material-symbols-outlined">
 mic
 </span></button>
+<audio id="audioPreview" controls></audio>
+<button class="audioButton" onclick="uploadAudio()">Upload Audio</button>
+<button class="audioButton" onclick="sendFileToServer()" style="background-color:rgb(112, 200, 112)">Submit</button>
 </div>
-    <button onclick="sendFileToServer()"></button>
+</audio>
 
 
 
