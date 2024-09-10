@@ -17,7 +17,9 @@ function sendFileToServer()
             }
             throw new Error("Network response failed")
         }).then(data => {
-            console.log(data)
+            document.getElementById("Notes").className = null
+            document.getElementById("Notes").classList.add("slideRight")
+            document.getElementById("Notes").innerText = data
         })
         .catch(error => {
             console.error("There was a problem with the fetch", error);

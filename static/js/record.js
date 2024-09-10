@@ -6,6 +6,7 @@ let audioPreview = document.getElementById("audioPreview")
 let audioFile = document.getElementById("audioFile")
 let bridgeBlob
 
+/*
 function AudioSetup()
 {
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)
@@ -33,7 +34,7 @@ function StreamSetup(stream)
 
     recorder.onstop = e =>
     {
-        const blob = new Blob(chunks, {type: "audio/wav; codecs=opus"})
+        const blob = new Blob(chunks, {type: "audio/mpeg"})
         chunks = []
         audioPreview.src = window.URL.createObjectURL(blob)
         audioFile.src = window.URL.createObjectURL(blob)
@@ -41,7 +42,7 @@ function StreamSetup(stream)
     }
 }
 AudioSetup()
-
+*/
 function uploadAudio()
 {
     audioFile.click()
@@ -70,6 +71,7 @@ audioFile.addEventListener('change', function(event) {
             const audio = event.target.result;
             audioFile.src = audio
             audioPreview.src = audio
+            bridgeBlob = file
         };
         reader.readAsDataURL(file);
     }
